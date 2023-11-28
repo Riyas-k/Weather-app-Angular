@@ -1,0 +1,123 @@
+<div class="container" *ngIf="weatherData">
+    <div class="upper-data">
+      <img
+        src="../assets/main-qimg-b00f0bb479ccca1a211ac4b248d7391e.webp"
+        alt=""
+        *ngIf="20 >= 21"
+      />
+      <img
+        src="../assets/hot-weather-summer-intense-heat-bright-sun-heat-waves-global-warming-burning-sun-dangerous-heat-high-temperature-problem-modern-time-period-future-thinking_887181-1863.avif"
+        alt=""
+        *ngIf="20 <= 21"
+      />
+      <div class="weather-data">
+        <!-- <div class="location">{{weatherData.name}}</div> -->
+        <div class="temperature">{{weatherData.main.temp | number : "1.0-0" }}°C</div>
+      </div>
+    </div>
+  
+    <div class="lower-data">
+      <div class="more-info-label">More Information</div>
+      <div class="more-info-container">
+          <div class="info-block">
+              <div class="info-block-label">
+                  <img src="../assets/4158502.png" alt="">
+                  <span>min</span>
+              </div>
+              <div class="info-block-value">
+                  10°C
+              </div>
+          </div>
+          <div class="info-block">
+              <div class="info-block-label">
+                  <img src="../assets/humidity.png" alt="">
+                  <span>humidity</span>
+              </div>
+              <div class="info-block-value">
+                  77%
+              </div>
+          </div>
+          <div class="info-block">
+              <div class="info-block-label">
+                  <img src="../assets/4158502.png" alt="">
+                  <span>max</span>
+              </div>
+              <div class="info-block-value">
+                  10°C
+              </div>
+          </div>
+          <div class="info-block">
+              <div class="info-block-label">
+                  <img src="../assets/4158502.png" alt="">
+                  <span>wind</span>
+              </div>
+              <div class="info-block-value">
+                  11 Km/h
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+<!-- 
+<div class="container">
+  <div class="upper-data">
+    <img
+      src="../assets/main-qimg-b00f0bb479ccca1a211ac4b248d7391e.webp"
+      alt=""
+      *ngIf="20 >= 21"
+    />
+    <img
+      src="../assets/hot-weather-summer-intense-heat-bright-sun-heat-waves-global-warming-burning-sun-dangerous-heat-high-temperature-problem-modern-time-period-future-thinking_887181-1863.avif"
+      alt=""
+      *ngIf="20 <= 21"
+    />
+    <div class="weather-data">
+      <div class="location">Wellington</div>
+      <div class="temperature">{{ 14.4 | number : "1.0-0" }}°C</div>
+    </div>
+  </div>
+
+  <div class="lower-data">
+    <div class="more-info-label">More Information</div>
+    <div class="more-info-container">
+        <div class="info-block">
+            <div class="info-block-label">
+                <img src="../assets/4158502.png" alt="">
+                <span>min</span>
+            </div>
+            <div class="info-block-value">
+                10°C
+            </div>
+        </div>
+        <div class="info-block">
+            <div class="info-block-label">
+                <img src="../assets/humidity.png" alt="">
+                <span>humidity</span>
+            </div>
+            <div class="info-block-value">
+                77%
+            </div>
+        </div>
+        <div class="info-block">
+            <div class="info-block-label">
+                <img src="../assets/4158502.png" alt="">
+                <span>max</span>
+            </div>
+            <div class="info-block-value">
+                10°C
+            </div>
+        </div>
+        <div class="info-block">
+            <div class="info-block-label">
+                <img src="../assets/4158502.png" alt="">
+                <span>wind</span>
+            </div>
+            <div class="info-block-value">
+                11 Km/h
+            </div>
+        </div>
+    </div>
+  </div>
+</div> -->
+
+<router-outlet></router-outlet>
